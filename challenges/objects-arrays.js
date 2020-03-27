@@ -5,7 +5,7 @@
   Given the following information about dinosaurs, create 3 objects: 
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
-  
+
 */
 class Dinosaur{
   constructor(attrs){
@@ -111,12 +111,15 @@ const contactInfo = graduates.map(item=>item.first_name +" "+ item.email);
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
-for(let i = 0; i <graduates.length;i++){
-  if(graduates[i].university.includes('Uni')){
-    unisWithUni.push(graduates[i].university);
-  }
-}
+let unisWithUni = [];
+unisWithUni = graduates.filter(item =>{
+  return item.university.includes('Uni')
+})
+// for(let i = 0; i <graduates.length;i++){
+//   if(graduates[i].university.includes('Uni')){
+//     unisWithUni.push(graduates[i].university);
+//   }
+// }
 
 
 console.log(unisWithUni);
